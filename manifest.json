@@ -17,7 +17,7 @@
     "service_worker": "src/service_worker.js",
     "type": "module"
   },
-  "permissions": ["scripting"],
+  "permissions": ["scripting", "tabs"],
   "host_permissions":  [
     "<all_urls>"
   ],
