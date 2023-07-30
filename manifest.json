@@ -1,8 +1,8 @@
 {
-  "name": "extesion-template",
+  "name": "web content tracker",
   "version": "0.1",
   "manifest_version": 3,
-  "description": "extesion-template description",
+  "description": "web content tracker description",
   "icons": {
     "16": "assets/icons/16.png",
     "32": "assets/icons/32.png",
@@ -12,6 +12,10 @@
   },
   "content_security_policy":{
     "extension_page": "script-src 'self' 'wasm-unsafe-eval'; object-src 'self'"
+  },
+  "options_ui": {
+    "page": "src/options/index.html",
+    "open_in_tab": true
   },
   "background": {
     "service_worker": "src/service_worker.js",

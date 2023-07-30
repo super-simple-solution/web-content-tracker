@@ -8,6 +8,8 @@
 // }
 
 // initEventHandler(contentReq)
-chrome.action.onClick = function () {
-  chrome.tabs.query({})
-}
+// chrome.action.onClick = function () {
+//   chrome.tabs.query({})
+// }
+
+console.log(1231)
