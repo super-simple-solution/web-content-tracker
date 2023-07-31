@@ -6,13 +6,23 @@ module.exports = {
     browser: true,
     webextensions: true,
   },
-  plugins: ['prettier'],
-  extends: ['eslint:recommended', 'prettier'],
+  plugins: ['vue', 'prettier'],
+  extends: [
+    'plugin:vue/vue3-recommended',
+    'eslint:recommended',
+    'prettier',
+    './.eslintrc-auto-import.json',
+  ],
   rules: {
+    'vue/require-default-prop': 'off',
+    'vue/no-v-html': 'off',
     'prefer-rest-params': 'off',
     'no-empty-function': 'off',
     'no-console': 0,
     'no-debugger': 0,
+    quotes: [1, 'single'], //引号类型 `` "" ''
+    semi: [2, 'never'], // 语句强制分号结尾
+    'vue/multi-word-component-names': 0,
     'prettier/prettier': [
       'error',
       {
@@ -28,11 +38,13 @@ module.exports = {
       },
     ],
   },
+  parser: 'vue-eslint-parser',
   parserOptions: {
     ecmaVersion: 2020,
     sourceType: 'module',
     ecmaFeatures: {
       experimentalObjectRestSpread: true,
+      jsx: true,
     },
   },
 }
